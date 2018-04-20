@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="lib/junit/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/junit/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/jaxen-1.1-beta-6.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/servlet-api.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/servlet.jar"/>
+	<classpathentry kind="lib" path="lib/servlet/standard.jar"/>
+	<classpathentry kind="lib" path="lib/file/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/file/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart/jcommon-1.0.16.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart/jfreechart-1.0.13.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

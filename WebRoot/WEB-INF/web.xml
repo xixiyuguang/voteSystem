@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>vote</display-name>
+
+	<!--admin login -->
+	<servlet>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>com.zq.servlet.AdminLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/AdminLogin</url-pattern>
+	</servlet-mapping>
+
+	<!-- list all candidate -->
+	<servlet>
+		<servlet-name>candidateList</servlet-name>
+		<servlet-class>com.zq.servlet.CandidateListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>candidateList</servlet-name>
+		<url-pattern>/candidateList</url-pattern>
+	</servlet-mapping>
+	<!-- add candidate -->
+	<servlet>
+		<servlet-name>addCandidate</servlet-name>
+		<servlet-class>com.zq.servlet.CandidateAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addCandidate</servlet-name>
+		<url-pattern>/AddCandidate</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- delete candidate -->
+	<servlet>
+		<servlet-name>deleteCandidate</servlet-name>
+		<servlet-class>com.zq.servlet.CandidateDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteCandidate</servlet-name>
+		<url-pattern>/DeleteCandidate</url-pattern>
+	</servlet-mapping>
+		<!-- find  candidate  by id  candidate -->
+	<servlet>
+		<servlet-name>findCandidateById</servlet-name>
+		<servlet-class>com.zq.servlet.CandidateFindByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>findCandidateById</servlet-name>
+		<url-pattern>/FindCandidateById</url-pattern>
+	</servlet-mapping>
+		<!-- update   candidate  by id  candidate -->
+	<servlet>
+		<servlet-name>updateCandidate</servlet-name>
+		<servlet-class>com.zq.servlet.CandidateUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateCandidate</servlet-name>
+		<url-pattern>/UpdateCandidate</url-pattern>
+	</servlet-mapping>
+		<!-- list candidate to voter -->
+	<servlet>
+		<servlet-name>voterListCandidate</servlet-name>
+		<servlet-class>com.zq.servlet.VoterListCandidate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>voterListCandidate</servlet-name>
+		<url-pattern>/ListCandidateToVoter</url-pattern>
+	</servlet-mapping>
+		<!-- list candidate to voter  com.zq.servlet.VoterCheckServlet-->
+	<servlet>
+		<servlet-name>voterCheckServlet</servlet-name>
+		<servlet-class>com.zq.servlet.VoterCheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>voterCheckServlet</servlet-name>
+		<url-pattern>/voterCheck</url-pattern>
+	</servlet-mapping>
+		<!-- image upload  com.zqq.file.UploadServlet-->
+	<servlet>
+		<servlet-name>imageUpload</servlet-name>
+		<servlet-class>com.zqq.file.UploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>imageUpload</servlet-name>
+		<url-pattern>/ImageUpload</url-pattern>
+	</servlet-mapping>
+		<!-- image upload  com.zqq.file.UpdateImageServlet-->
+	<servlet>
+		<servlet-name>updateImageServlet</servlet-name>
+		<servlet-class>com.zqq.file.UpdateImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateImageServlet</servlet-name>
+		<url-pattern>/UpdateImageServlet</url-pattern>
+	</servlet-mapping>
+		<!--    com.zq.servlet.BallotCountListServlet-->
+	<servlet>
+		<servlet-name>ballotCountListServlet</servlet-name>
+		<servlet-class>com.zq.servlet.BallotCountListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ballotCountListServlet</servlet-name>
+		<url-pattern>/BallotCountListServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- chart -->
+	
+	<servlet>
+		<servlet-name>DisplayChart</servlet-name>
+		<servlet-class>
+			org.jfree.chart.servlet.DisplayChart<!--这个固定不变 -->
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/DisplayChart</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>jfreeChartServlet</servlet-name>
+		<servlet-class>
+			com.zq.jfreechart.JfreeChartServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jfreeChartServlet</servlet-name>
+		<url-pattern>/JfreeChartServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>takePhoto</servlet-name>
+		<servlet-class>
+			com.zqq.takephoto.Uploadimage
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>takePhoto</servlet-name>
+		<url-pattern>/deal</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>downServlet</servlet-name>
+		<servlet-class>
+			com.zqq.file.DownServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>downServlet</servlet-name>
+		<url-pattern>/DownServlet</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

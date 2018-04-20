@@ -1,0 +1,7 @@
+ 
+<input type="text" name="createtime" value="
+	<fmt:formatDate value="${itemsCustom.createtime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+	"
+/>
+
+ 
