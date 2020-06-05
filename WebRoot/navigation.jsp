@@ -11,14 +11,14 @@
 	
 		<tr height="50">
 			<td>
-			<a href="${pageContext.request.contextPath }/ListCandidateToVoter" target="index"><font size="4" color="white">查看候选人</font></a>
+			<a href="${pageContext.request.contextPath }/ListCandidateToVoter" target="index"><font size="4" color="white">欢迎界面</font></a>
 			</td>
 			<td>
 			<a href="${pageContext.request.contextPath }/BallotCountListServlet" target="index"><font size="4" color="white">查看结果</font></a>
 			</td>
 			<td>
 			<a href="${pageContext.request.contextPath }/JfreeChartServlet" target="index"><font size="4" color="white">查看统计图</font></a>
-			</td>			
+			</td> 	
 		</tr>
 	 
 				

@@ -9,24 +9,24 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>显示候选人</title>
+<title>显示用户</title>
 </head>
 <body bgcolor="#F6F9FE">
 		<br>
 		<br>
 		<br>
-		<br> 候选人列表：
+		<br> 用户列表：
 		<table width="100%" border=1 >
 			<tr >
 				<td>id</td>
 				<td>name</td>
 				<td>sex</td>
 				<td>age</td>
-				<td>address</td>
-				<td>introduce</td>
+				<td>账号（<!-- address -->）</td>
+				<td>密码（<!-- introduce -->）</td>
 				<td>image</td>
-				<td>ballot</td>
-				<td>修改信息</td>
+				<!-- <td>ballot</td> 
+				<td>修改信息</td>-->
 			</tr>
 		 <c:forEach items="${requestScope.candidateList}" var="list"> 
 			
@@ -44,7 +44,7 @@
 					<a href="${pageContext.request.contextPath }/files/images/${list.image }">查看大图</a>
 					 	<a href="${pageContext.request.contextPath }/DownServlet?file=${list.image }">下载图片</a>				   
 					 </td>
-					<td>${list.ballot }</td>
+					<%-- <td>${list.ballot }</td> --%>
 <td>
 	<a href="${pageContext.request.contextPath }/FindCandidateById?id=${list.id }">修改</a>
 	<a href="${pageContext.request.contextPath }/DeleteCandidate?id=${list.id }">删除</a>

@@ -70,7 +70,7 @@ var reg = /^(-|\+)?\d+$/ ;
 </script>
 
 <body style="text-align: center;" bgcolor="#F6F9FE">
-	<h1>添加候选人信息</h1>
+	<h1>添加用户信息</h1>
 	<hr>
 	<!--/ImageUpload      /AddCandidate-->
 <%-- 	<font color="red">${msg }</font>
@@ -98,15 +98,15 @@ var reg = /^(-|\+)?\d+$/ ;
 				</td>
 			</tr>
 			<tr>
-				<td>地址</td>
+				<td>账号（<!-- address -->）</td>
 				<td>
 					<input type="text" name ="address" id="address_id" onblur="checkAddress()"/>
 					<span id="addressidSpan" style=" color:#F00">不能为空！</span>
 				</td>
 			</tr>
 			<tr>
-				<td>个人介绍</td>
-				<td><textarea name="introduce" cols="100" rows="4" id="introduce_id" onblur="checkIntroduce()"></textarea><br>
+				<td>密码（<!-- introduce -->）</td>
+				<td><textarea name="introduce" cols="100" rows="1" id="introduce_id" onblur="checkIntroduce()"></textarea><br>
 				<!-- <span id="introducedSpan" style=" color:#F00">不能为空！</span> -->
 				</td>
 			</tr>
@@ -119,7 +119,7 @@ var reg = /^(-|\+)?\d+$/ ;
 			</tr>
 		
 			<tr>
-				<td><input type="submit" value="添加候选人" onclick="check()" />
+				<td><input type="submit" value="添加" onclick="check()" />
 				</td>
 				<td align="center"><input type="reset" id="009" name="重置" value="重置"></td>
 			</tr>

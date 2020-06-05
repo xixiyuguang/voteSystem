@@ -34,5 +34,13 @@ create table photo(
 	PRIMARY KEY (id)
 );
 
+create table message(
+	id int not null auto_increment,
+	name varchar(255),
+	phone varchar(255),
+	words varchar(255),
+	PRIMARY KEY (id)
+);
+
 
 insert into admin values (null,'于光','yg','yg')

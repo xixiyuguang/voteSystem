@@ -11,6 +11,11 @@ import com.zq.po.Candidate;
 import com.zq.service.AdminService;
 import com.zq.service.CandidateService;
 
+/**
+ * 投票检测
+ * @author yg
+ *
+ */
 public class VoterCheckServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,

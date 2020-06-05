@@ -7,6 +7,7 @@
 <title>导航页</title>
 
 		<frameset cols="155px,*">
+		<!-- 导航栏的页面  -->
 			<frame src="guard.jsp"  scrolling="yes" frameborder="0"noresize></frame>
 			<frame src="welcome.jsp" name="frame" frameborder="1" noresize></frame>
 		</frameset>

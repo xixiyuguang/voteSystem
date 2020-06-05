@@ -5,6 +5,54 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<display-name>vote</display-name>
 
+<!--Driver login -->
+	<servlet>
+		<servlet-name>DriverLoginServlet</servlet-name>
+		<servlet-class>com.zq.servlet.DriverLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DriverLoginServlet</servlet-name>
+		<url-pattern>/DriverLogin</url-pattern>
+	</servlet-mapping>
+<!--json 数据 -->
+	<servlet>
+		<servlet-name>JsonServlet</servlet-name>
+		<servlet-class>com.yg.face.JsonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JsonServlet</servlet-name>
+		<url-pattern>/JsonString</url-pattern>
+	</servlet-mapping>
+
+<!--嘴巴分析 MouthServlet -->
+	<servlet>
+		<servlet-name>mouthServlet</servlet-name>
+		<servlet-class>com.yg.face.MouthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mouthServlet</servlet-name>
+		<url-pattern>/mouthServlet</url-pattern>
+	</servlet-mapping>
+		
+<!--眼睛  EyeServlet -->
+	<servlet>
+		<servlet-name>eyeServlet</servlet-name>
+		<servlet-class>com.yg.face.EyeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eyeServlet</servlet-name>
+		<url-pattern>/eyeServlet</url-pattern>
+	</servlet-mapping>
+<!--头部状态ContourServlet -->
+	<servlet>
+		<servlet-name>contourServlet</servlet-name>
+		<servlet-class>com.yg.face.ContourServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contourServlet</servlet-name>
+		<url-pattern>/contourServlet</url-pattern>
+	</servlet-mapping>
+
 	<!--admin login -->
 	<servlet>
 		<servlet-name>AdminLoginServlet</servlet-name>
@@ -62,6 +110,9 @@
 		<servlet-name>updateCandidate</servlet-name>
 		<url-pattern>/UpdateCandidate</url-pattern>
 	</servlet-mapping>
+	
+	
+	
 		<!-- list candidate to voter -->
 	<servlet>
 		<servlet-name>voterListCandidate</servlet-name>
@@ -71,6 +122,9 @@
 		<servlet-name>voterListCandidate</servlet-name>
 		<url-pattern>/ListCandidateToVoter</url-pattern>
 	</servlet-mapping>
+	
+	
+	
 		<!-- list candidate to voter  com.zq.servlet.VoterCheckServlet-->
 	<servlet>
 		<servlet-name>voterCheckServlet</servlet-name>
@@ -133,13 +187,14 @@
 		<servlet-name>jfreeChartServlet</servlet-name>
 		<url-pattern>/JfreeChartServlet</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 拍照  -->
 	<servlet>
 		<servlet-name>takePhoto</servlet-name>
 		<servlet-class>
 			com.zqq.takephoto.Uploadimage
 		</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>takePhoto</servlet-name>
 		<url-pattern>/deal</url-pattern>
@@ -159,6 +214,6 @@
 	</servlet-mapping>
 
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>face.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

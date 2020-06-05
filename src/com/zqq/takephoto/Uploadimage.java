@@ -38,7 +38,7 @@ public class Uploadimage extends HttpServlet {
 
 		PrintWriter pw = response.getWriter();
 
-		System.out.println("adassad");
+		
 		pw.println("receive!");
 
 		BufferedReader read;
@@ -75,7 +75,7 @@ public class Uploadimage extends HttpServlet {
 			}
 		 
 			String uuidName = UUID.randomUUID().toString(); 
-			String imgFilePath = "D:/apache-tomcat-6.0.45/webapps/Day15/takephoto" +uuidName + ".png";// 
+			//String imgFilePath = "D:/apache-tomcat-6.0.45/webapps/Day15/takephoto" +uuidName + ".png";// 
 			String path = this.getServletContext().getRealPath("takephoto");
 			System.out.println(path);
 			String[] a = path.split("\\\\");
@@ -87,7 +87,7 @@ public class Uploadimage extends HttpServlet {
 			}
 			System.out.println(str);
 			
-			OutputStream out = new FileOutputStream(str+uuidName + ".png");
+			OutputStream out = new FileOutputStream(str+1+ ".png");
 			out.write(b);
 			out.flush();
 			out.close();

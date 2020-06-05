@@ -21,16 +21,19 @@
 		</tr>
 		<!--  /candidate/candidate_list.jsp-->
 		<tr height="50">
-			<td><a href="${pageContext.request.contextPath }/candidateList" target="frame"><font size="5">查看候选人</font></a></td>
+			<td><a href="${pageContext.request.contextPath }/candidateList" target="frame"><font size="5">查看用户</font></a></td>
 		</tr>
 		
 		<tr height="50">
-			<td><a href="${pageContext.request.contextPath }/candidate/candidate_add.jsp" target="frame"><font size="5">添加候选人</font></a></td>
+			<td><a href="${pageContext.request.contextPath }/candidate/candidate_add.jsp" target="frame"><font size="5">添加用户</font></a></td>
 		</tr>
+		<%-- <tr height="50">
+			<td><a href="${pageContext.request.contextPath }/candidate/checkMessage" target="frame"><font size="5">查看留言</font></a></td>
+		</tr> --%>
 		
-		<tr height="50">
+		<%-- <tr height="50">
 			<td><a href="${pageContext.request.contextPath }/BallotCountListServlet" target="frame"><font size="5">票数统计</font></a></td>
-		</tr>
+		</tr> --%>
 				
 	</table>
 </body>

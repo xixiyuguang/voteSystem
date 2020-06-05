@@ -14,6 +14,39 @@ import com.zq.po.Admin;
 import com.zq.po.Candidate;
 
 public class CandidateDaoImpl implements CandidateDao {
+	
+	
+	
+	public Candidate findCandidateById(int id) {
+		String sql = "select * from candidate where id=?";
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			conn = JDBCUtils.getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				Candidate candidate = new Candidate();
+				candidate.setId(rs.getInt("id"));
+				candidate.setName(rs.getString("name"));
+				candidate.setSex(rs.getString("sex"));
+				candidate.setAge(rs.getInt("age"));
+				candidate.setAddress(rs.getString("address"));
+				candidate.setImage(rs.getString("image"));
+				candidate.setIntroduce(rs.getString("introduce"));
+				candidate.setBallot(rs.getInt("ballot"));
+				return candidate;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtils.close(rs, ps, conn);
+		}
+		return null;
+	}
 
 	// 插入候选人
 	public Boolean addCandidate(Candidate candidate) {
@@ -79,15 +112,19 @@ public class CandidateDaoImpl implements CandidateDao {
 		return list;
 	}
 
-	public Candidate findCandidateById(int id) {
-		String sql = "select * from candidate where id=?";
+	/**
+	 * 让address和introduce成为账号密码
+	 */
+
+	public Candidate findCandidateByAddress(String address) {
+		String sql = "select * from candidate where address=?";
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
 			conn = JDBCUtils.getConnection();
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, id);
+			ps.setString(1, address);
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				Candidate candidate = new Candidate();

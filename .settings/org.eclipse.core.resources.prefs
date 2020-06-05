@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//WebRoot/takephoto/json.jsp=UTF-8
+encoding//WebRoot/takephoto/leaveword.jsp=UTF-8
 encoding//src/com/zq/jfreechart/JFreeChartTest3.java=UTF-8
 encoding//src/com/zqq/file/UpdateImageServlet.java=UTF-8
 encoding//src/com/zqq/file/UploadServlet.java=UTF-8

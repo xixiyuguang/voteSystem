@@ -1,0 +1,3 @@
+使兼容的路径
+WebRoot\WEB-INF
+

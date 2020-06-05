@@ -8,6 +8,20 @@ import com.zq.po.Candidate;
 public class CandidateService {
 
 	private CandidateDaoImpl dao = new CandidateDaoImpl();
+	
+	public Candidate isDriver(String address,String introduce){
+		
+		Candidate candidate = dao.findCandidateByAddress(address);
+		
+		if(candidate.getIntroduce().equals(introduce)){
+			return candidate;
+		}
+		else{
+			return null;
+		}
+		
+		
+	}
 
 	public Boolean addCandidate(Candidate candidate) {
 		Boolean b = dao.addCandidate(candidate);

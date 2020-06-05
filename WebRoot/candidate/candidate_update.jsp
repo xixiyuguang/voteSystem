@@ -5,7 +5,7 @@
 <head>
 </head>
 <body style="text-align: center;" bgcolor="#F6F9FE">
-	<h1>修改候选人信息</h1>
+	<h1>修改<!-- 候选人 -->信息</h1>
 	<hr>
 	${sessionScope.candidate.name }
 	<form
@@ -38,12 +38,12 @@
 					value="${sessionScope.candidate.age }" /></td>
 			</tr>
 			<tr>
-				<td>地址</td>
+				<td>账号（address）</td>
 				<td><input type="text" name="address"
 					value="${sessionScope.candidate.address }" /></td>
 			</tr>
 			<tr>
-				<td>个人介绍</td>
+				<td>密码（introduce）</td>
 				<td><textarea name="introduce" cols="100" rows="4">${sessionScope.candidate.introduce }</textarea>
 				</td>
 			</tr>
